@@ -81,7 +81,7 @@ Query to find users with multiple failed login attempts:
     GROUP BY user_id
     HAVING failed_login_attempts > 3;
 
-### Scenario Two: Investigating Suspicious Activity
+### Scenario Two: Identifying Traffic Anomalies
 Query to identify anomalies in network traffic:
 
     SELECT source_ip, destination_ip, COUNT(*) AS traffic_count
@@ -89,7 +89,7 @@ Query to identify anomalies in network traffic:
     GROUP BY source_ip, destination_ip
     HAVING traffic_count > 100;
 
-### Scenario Three: Investigating Suspicious Activity
+### Scenario Three: User Account Lockouts
 Query to identify user accounts with multiple lockouts, which may indicate a potential security threat.
 
     -- Find user accounts with multiple lockouts
